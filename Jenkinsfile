@@ -6,22 +6,22 @@ pipeline {
     }
     stages {
         stage("Cleanup Wordkspace"){
-            step {
+            steps {
                 CleanWs()
             }
         }
         stage("Checkout From SCM"){
-            step {
+            steps {
                 git branch: 'master', credentialsID: 'Github', url: 'https://github.com/Yuvi-1228/CI-CD-Demo.git'
             }
         }
         stage ("Build Application"){
-            step {
+            steps {
                 sh "mvn clean package"
             }
         }
         stage ("Test Application"){
-            step{
+            steps{
                 sh "mvn test"
             }
         }
