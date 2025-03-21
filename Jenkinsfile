@@ -12,7 +12,7 @@ pipeline {
         }
         stage("Checkout From SCM"){
             steps {
-                git branch: 'master', credentialsID: 'Github', url: 'https://github.com/Yuvi-1228/CI-CD-Demo.git'
+                git branch: 'master', credentialsId: 'Github', url: 'https://github.com/Yuvi-1228/CI-CD-Demo.git'
             }
         }
         stage ("Build Application"){
