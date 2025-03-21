@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage("Cleanup Wordkspace"){
             steps {
-                CleanWs()
+                cleanWs()
             }
         }
         stage("Checkout From SCM"){
